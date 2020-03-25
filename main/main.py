@@ -194,10 +194,10 @@ def chooseAction(yp, rc, bc):
             out[0] = 'drag'
             out[1] = 'true'
             return out
-        elif distance(rc,bc)<40:
+        elif distance(yp,rc)<40:
             out[0] = 'right'
             return out
-        elif distance(yp,rc)<40:
+        elif distance(yp,bc)<40:
             out[0] = 'left'
             return out
         elif distance(yp,rc)>40 and rc[1]-bc[1]>120:
