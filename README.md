@@ -1,1 +1,9 @@
-Hand-motion-mouse-controller
+###### **Hand-motion-mouse-controller**
+
+**Requirement:**
+
+* Python 3.0
+
+* Open CV
+
+* PyAutoGUI
