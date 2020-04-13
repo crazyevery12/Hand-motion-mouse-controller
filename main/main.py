@@ -20,7 +20,7 @@ kernel = np.ones((7,7),np.uint8)
 
 # Status variables defined globally
 perform = False
-showCentroid = False
+showCentroid = True
 
 def nothing(x):
     pass
@@ -46,14 +46,6 @@ def changeStatus(key):
             print('Mouse simulation ON...')
         else:
             print ('Mouse simulation OFF...')
-
-    # toggle display of centroids
-    elif key == ord('c'):
-        showCentroid = not showCentroid
-        if showCentroid:
-            print ('Showing Centroids...')
-        else:
-            print ('Not Showing Centroids...')
 
     elif key == ord('r'):
 
@@ -266,7 +258,6 @@ def performAction( yp, rc, bc, action, drag, perform):
             pyautogui.mouseUp()
 
 
-
 cap = cv2.VideoCapture(0)
 
 print ('Press SPACE when done.')
@@ -280,7 +271,6 @@ print ('	Calibration Successfull...')
 cv2.namedWindow('Frame')
 
 print ('	Press P to turn ON and OFF mouse.')
-print ('	Press C to display the centroid of various colours.')
 print ('	Press R to recalibrate color ranges.')
 print ('	Press ESC to exit.')
 while(1):
